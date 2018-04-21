@@ -1,6 +1,6 @@
 class Album
 
-  attr_reader :id
+  attr_reader :id, :title
 
   def initialize(options)
     @id = options['id'].to_i

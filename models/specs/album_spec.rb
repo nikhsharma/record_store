@@ -29,4 +29,8 @@ class TestAlbum < MiniTest::Test
     assert_equal(1, @album1.id)
   end
 
+  def test_get_title()
+    assert_equal("Kid A", @album1.title)
+  end
+
 end
