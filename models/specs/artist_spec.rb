@@ -8,12 +8,17 @@ class TestArtist < MiniTest::Test
   def setup()
     @artist1 = Artist.new(
       {
+        'id' => 1,
         'name' => 'Radiohead'
       }
     )
   end
 
-  def test_artist_get_name()
+  def test_get_id()
+    assert_equal(1, @artist1.id)
+  end
+
+  def test_get_name()
     assert_equal("Radiohead", @artist1.name)
   end
 
