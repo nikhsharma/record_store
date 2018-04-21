@@ -1,6 +1,6 @@
-<h1><%= @artist.name%></h1>
-<% @artist.albums.each do |album|%>
-<p><%= album.title %></p>
+<h1><%= @artist.name %></h1>
+<% @artist.albums.each do |album| %>
+<p><a href="/albums/<%= album.id %>"> <%= album.title %></a></p>
 <p><%= album.genre %></p>
 <p><%= album.stock %></p>
 <% end %>
