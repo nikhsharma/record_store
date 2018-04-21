@@ -33,4 +33,8 @@ class TestAlbum < MiniTest::Test
     assert_equal("Kid A", @album1.title)
   end
 
+  def test_get_stock()
+    assert_equal("alternative", @album1.genre)
+  end
+
 end
