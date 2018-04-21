@@ -7,6 +7,16 @@
   <title>Record Store</title>
 </head>
 <body>
-  <%= yield %>
+  <main>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/artists"> Artists</a></li>
+      </ul>
+    </nav>
+    <section>
+      <%= yield %>
+    </section>
+  </main>
 </body>
 </html>
