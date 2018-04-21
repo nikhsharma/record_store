@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner.rb')
+
 class Album
 
   attr_reader :id, :title, :genre, :artist_id
