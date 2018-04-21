@@ -40,7 +40,6 @@ class Artist
     sql = "SELECT * FROM artists WHERE id = $1;"
     values = [id]
     return SqlRunner.run(sql, values)[0]
-
   end
 
   def self.all()
