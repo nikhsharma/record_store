@@ -37,4 +37,8 @@ class TestAlbum < MiniTest::Test
     assert_equal("alternative", @album1.genre)
   end
 
+  def test_get_artists_id()
+    assert_equal(1, @album1.artist_id)
+  end
+
 end
