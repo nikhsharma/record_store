@@ -5,3 +5,7 @@
 <p><%= album.stock %></p>
 <hr />
 <% end %>
+
+<form action="/artists/<%= @artist.id %>/delete" method="post">
+  <input type="submit" value="Delete Artist">
+</form>

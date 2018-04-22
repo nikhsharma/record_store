@@ -22,3 +22,8 @@ get '/artists/:id' do
   @artist = Artist.find_by_id(params['id'].to_i)
   erb(:"artists/show")
 end
+
+post '/artists/:id/delete' do
+  Artist.find_by_id(params['id']).delete()
+  redirect to '/artists'
+end
