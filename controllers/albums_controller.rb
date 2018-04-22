@@ -8,7 +8,6 @@ get '/albums' do
   erb(:"albums/index")
 end
 
-
 get '/albums/new' do
   @artists = Artist.all()
   erb(:"albums/new")
@@ -23,4 +22,9 @@ end
 get '/albums/:id' do
   @album = Album.find_by_id(params['id'].to_i)
   erb(:"albums/show")
+end
+
+post '/albums/:id/delete' do
+Album.find_by_id(params['id'].to_i).delete()
+redirect to ("/albums")
 end

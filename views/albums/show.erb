@@ -2,3 +2,6 @@
 <h2><%= @album.artist.name %></h2>
 <p>Genre: <%= @album.genre %></p>
 <p>Stock: <%= @album.stock %></p>
+<form action="/albums/<%= @album.id %>/delete" method="post">
+  <input type="submit" value="Delete Album">
+</form>
