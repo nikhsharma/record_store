@@ -10,7 +10,7 @@
   <tr>
     <th>Artist</th>
     <th>Albums</th>
-    <th>Stock</th>
+    <th>Stock Level</th>
   </tr>
   <% @artists.each do |artist| %>
   <tr>
@@ -23,7 +23,7 @@
   </td>
     <td>
     <% artist.albums.each do |album| %>
-    <%= album.stock %>
+    <%= album.stock_level %>
     <br />
     <% end %>
   </td>

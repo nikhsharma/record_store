@@ -1,0 +1,40 @@
+<h1>Inventory</h1>
+
+<table>
+  <tr>
+    <th>Artist</th>
+    <th>Album</th>
+    <th>Genre</th>
+    <th>Stock</th>
+    <th>Stock Level</th>
+  </tr>
+  <% @artists.each do |artist| %>
+  <tr>
+    <td> <a href="/artists/<%= artist.id %>"><%= artist.name %></a> </td>
+    <td>
+      <% artist.albums.each do |album| %>
+      <a href="/albums/<%= album.id %>"><%= album.title %></a>
+      <br />
+      <% end %>
+    </td>
+    <td>
+      <% artist.albums.each do |album| %>
+      <%= album.genre %>
+      <br />
+      <% end %>
+    </td>
+    <td>
+      <% artist.albums.each do |album| %>
+      <%= album.stock %>
+      <br />
+      <% end %>
+    </td>
+    <td>
+      <% artist.albums.each do |album| %>
+      <%= album.stock_level %>
+      <br />
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+</table>
