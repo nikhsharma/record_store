@@ -39,6 +39,12 @@ class Album
     return Artist.new(result)
   end
 
+  def stock_level()
+      return "Low" if @stock < 4
+      return "Medium" if @stock >= 4 && @stock < 7
+      return "High" if @stock >= 7
+  end
+
   def self.find_by_id(id)
     sql = "SELECT * FROM albums WHERE id = $1;"
     values = [id]

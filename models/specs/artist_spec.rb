@@ -11,7 +11,6 @@ class TestArtist < MiniTest::Test
         'id' => 1,
         'name' => 'Radiohead'
       }
-    )
   end
 
   def test_get_id()
@@ -21,5 +20,5 @@ class TestArtist < MiniTest::Test
   def test_get_name()
     assert_equal("Radiohead", @artist1.name)
   end
-
+  
 end
