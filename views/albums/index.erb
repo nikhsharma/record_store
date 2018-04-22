@@ -3,4 +3,5 @@
 <% @albums.each do |album| %>
 <p><a href="/albums/<%= album.id %>"><%= album.title %></a></p>
 <a href="/artists/<%= album.artist.id%>"><%= album.artist.name %></a>
+<hr />
 <% end %>

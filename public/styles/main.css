@@ -1,0 +1,23 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0, auto;
+  padding: 0, auto;
+}
+
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav li {
+  padding: 20px;
+  list-style-type: none;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+}
