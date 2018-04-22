@@ -6,15 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Record Store</title>
   <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/tables.css">
 </head>
 <body>
   <main>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
+        <li>|</li>
         <li><a href="/artists">Artists</a></li>
+        <li>|</li>
         <li><a href="/albums">Albums</a></li>
+        <li>|</li>
         <li><a href="/inventory">Inventory</a></li>
+        <li>|</li>
         <li>
           <form action="/search" method="get">
             <input type="text" name="name" >
@@ -23,7 +28,7 @@
         </li>
       </ul>
     </nav>
-    <section>
+    <section id="content">
       <%= yield %>
     </section>
   </main>

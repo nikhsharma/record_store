@@ -4,21 +4,35 @@ body {
   padding: 0, auto;
 }
 
+nav {
+  border-bottom: 1px solid lightslategray;
+}
 
 nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 nav li {
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   list-style-type: none;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  padding: 1em;
 }
 
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
