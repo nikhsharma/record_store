@@ -1,4 +1,6 @@
-<h1>All albums</h1>
+<h1>All albums | <a href="/albums/new">Add new Album</a></h1>
+
+
 
 <% @albums.each do |album| %>
 <p><a href="/albums/<%= album.id %>"><%= album.title %></a></p>
