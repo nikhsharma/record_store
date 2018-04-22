@@ -8,10 +8,10 @@ You should be able to add stock, which would have an Artist and Album as well as
 
 ### MVP:
 
-- Create albums with the quantity that are in stock
-- Create artists
-- Show an inventory page listing albums and artists
-- Show a stock level for the inventory items e.g. High/Medium/Low
+- <strike>Create albums with the quantity that are in stock</strike>
+- <strike>Create artists</strike>
+- <strike>Show an inventory page listing albums and artists</strike>
+- <strike>Show a stock level for the inventory items e.g. High/Medium/Low</strike>
 
 ### Possible Extensions:
 
