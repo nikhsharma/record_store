@@ -7,6 +7,7 @@ require_relative('controllers/albums_controller.rb')
 
 
 get '/' do
+  @artists = Artist.all()
   erb(:index)
 end
 
