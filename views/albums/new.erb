@@ -1,0 +1,21 @@
+<h1>Add new Album</h1>
+
+<form action="/albums" method="post">
+  <label for="artist_id">Select an artist:</label>
+  <select  name="artist_id" id="artist_id">
+    <% @artists.each do |artist| %>
+    <option value=<%= artist.id %>><%= artist.name %></option>
+    <% end %>
+  </select>
+
+  <label for="title">Title:</label>
+  <input type="text" name="title" id="title">
+
+  <label for="genre">Genre:</label>
+  <input type="text" name="genre" id="genre">
+
+  <label for="stock">Stock:</label>
+  <input type="number" name="stock" id="stock">
+
+  <input class="btn btn--action" type='submit' value="Create Album">
+</form>
