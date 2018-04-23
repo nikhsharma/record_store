@@ -12,6 +12,7 @@ nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  height: 3vh;
 }
 
 nav li {
@@ -28,12 +29,35 @@ a {
   color: darkslategray;
 }
 
-h1 {
-  text-align: center;
-}
-
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.show-album {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show-album-content {
+  height: 94vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show-artwork {
+  float: left;
+  height: 94vh;
+}
+
+.show-album-title {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.show-album-artist {
+margin-top: 0;
+oadding: 0;
 }
