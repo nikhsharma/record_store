@@ -22,7 +22,7 @@ artist2 = Artist.new(
 artist3 = Artist.new(
   {
     'name' => 'Childish Gambino',
-    'profile_image' => '/images/childish_gambino_profile.jpg'
+    'profile_image' => '/images/childish_gambino_profile.jpeg'
   }
 )
 
