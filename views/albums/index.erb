@@ -1,9 +1,14 @@
-<h1>All albums | <a href="/albums/new">Add new Album</a></h1>
+<h1 class="center">All albums | <a class="new-link" href="/albums/new">Add new Album</a></h1>
 
 
-
+<div class="all-albums">
 <% @albums.each do |album| %>
-<p><a href="/albums/<%= album.id %>"><%= album.title %></a></p>
+<a href="/albums/<%= album.id %>"><div class="albums">
+<img class="thumbnail" src="<%= album.artwork %>" alt="">
+<div class="albums-content">
+<h1><a href="/albums/<%= album.id %>"><%= album.title %></a></h1>
 <a href="/artists/<%= album.artist.id%>"><%= album.artist.name %></a>
-<hr />
+</div>
+</div></a>
 <% end %>
+</div>

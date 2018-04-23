@@ -1,8 +1,8 @@
 <div class="show-album">
 <img class="show-artwork" src="<%= @album.artwork %>" alt="album artwork">
 <div class="show-album-content">
-<h1 class="show-album-title"><%= @album.title %></h1>
-<h2 class="show-album-artist"><a href="/artists/<%= @album.artist.id %>"><%= @album.artist.name %></a></h2>
+<h1><%= @album.title %></h1>
+<h2><a href="/artists/<%= @album.artist.id %>"><%= @album.artist.name %></a></h2>
 <p>Genre: <%= @album.genre %></p>
 <p>Stock: <%= @album.stock %></p>
 <form action="/albums/<%= @album.id %>/delete" method="post">
