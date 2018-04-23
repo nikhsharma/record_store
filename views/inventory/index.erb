@@ -7,6 +7,8 @@
     <th>Genre</th>
     <th>Stock</th>
     <th>Stock Level</th>
+    <th>Buy Price</th>
+    <th>Sell Price</th>
   </tr>
   <% @artists.each do |artist| %>
   <tr>
@@ -32,6 +34,18 @@
     <td>
       <% artist.albums.each do |album| %>
       <%= album.stock_level %>
+      <br />
+      <% end %>
+    </td>
+    <td>
+      <% artist.albums.each do |album| %>
+      <%= album.buy_price %>
+      <br />
+      <% end %>
+    </td>
+    <td>
+      <% artist.albums.each do |album| %>
+      <%= album.sell_price %>
       <br />
       <% end %>
     </td>
