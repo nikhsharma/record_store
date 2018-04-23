@@ -48,7 +48,7 @@ class Album
   end
 
   def markup()
-    return @sell_price - @buy_price    
+    return @sell_price - @buy_price
   end
 
   def self.find_by_id(id)
@@ -59,7 +59,7 @@ class Album
   end
 
   def self.all()
-    sql = "SELECT * FROM albums;"
+    sql = "SELECT albums.* FROM albums INNER JOIN artists on albums.artist_id = artists.id ORDER BY artists.name ASC;"
     albums = SqlRunner.run(sql)
     return albums.map { |album| Album.new(album)}
   end

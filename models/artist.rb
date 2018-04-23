@@ -52,7 +52,7 @@ class Artist
   end
 
   def self.all()
-    sql = "SELECT * FROM artists;"
+    sql = "SELECT * FROM artists ORDER BY name ASC;"
     artists = SqlRunner.run(sql)
     return artists.map { |artist| Artist.new(artist)}
   end
