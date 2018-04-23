@@ -14,6 +14,10 @@ end
 
 
 get '/search' do
- @artist = Artist.find_by_name(params['name'])
+  @artist = Artist.find_by_name(params['name'])
+  if @artist == nil
+    redirect to '/'
+  else
     erb(:"artists/show")
+  end
 end
