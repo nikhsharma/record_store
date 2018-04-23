@@ -4,23 +4,24 @@ require_relative('album.rb')
 class Artist
 
   attr_reader :id
-  attr_accessor :name
+  attr_accessor :name, :profile_image
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
+    @profile_image = options['profile_image']
   end
 
   def save()
-    sql = "INSERT INTO artists (name) VALUES ($1) RETURNING id;"
-    values = [@name]
+    sql = "INSERT INTO artists (name, profile_image) VALUES ($1, $2) RETURNING id;"
+    values = [@name, @profile_image]
     result = SqlRunner.run(sql, values)
     @id = result[0]['id'].to_i
   end
 
   def update()
-    sql = "UPDATE artists SET name = $1 WHERE id = $2;"
-    values = [@name, @id]
+    sql = "UPDATE artists SET (name, profile_image) = ($1, $2) WHERE id = $3;"
+    values = [@name, @profile_image, @id]
     SqlRunner.run(sql, values)
   end
 

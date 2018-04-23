@@ -3,7 +3,8 @@ DROP TABLE artists;
 
 CREATE TABLE artists (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  profile_image VARCHAR
 );
 
 CREATE TABLE albums (

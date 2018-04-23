@@ -21,7 +21,7 @@
       <% end %>
     </td>
     <td>
-      <% artist.albums do |album| %>
+      <% artist.albums.each do |album| %>
       <%= album.genre %>
       <br />
       <% end %>

@@ -7,19 +7,22 @@ Artist.delete_all()
 
 artist1 = Artist.new(
   {
-    'name' => 'Radiohead'
+    'name' => 'Radiohead',
+    'profile_image' => '/images/radiohead_profile.jpg'
   }
 )
 
 artist2 = Artist.new(
   {
-    'name' => 'GoGo Penguin'
+    'name' => 'GoGo Penguin',
+    'profile_image' => '/images/gogo_penguin_profile.jpg'
   }
 )
 
 artist3 = Artist.new(
   {
-    'name' => 'Childish Gambino'
+    'name' => 'Childish Gambino',
+    'profile_image' => '/images/childish_gambino_profile.jpg'
   }
 )
 
