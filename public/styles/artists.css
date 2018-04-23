@@ -1,9 +1,8 @@
 .profile {
   height: 40vh;
-  width: 100%;
-  border: 1px solid black;
-  margin: 0;
-  padding:0;
+  width: 100vw;
+  margin: 0, auto;
+  padding: 0, auto;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: 50% 30% !important;

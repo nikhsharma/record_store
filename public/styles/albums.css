@@ -35,7 +35,7 @@ padding: 0;
 .all-albums {
   display: flex;
   flex-wrap: wrap;
-  width: 90vw;
+  width: 85vw;
   margin-left: 10vw;
 }
 
