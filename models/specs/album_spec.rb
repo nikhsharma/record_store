@@ -20,7 +20,9 @@ class TestAlbum < MiniTest::Test
         'title' => 'Kid A',
         'stock' => 2,
         'genre' => 'alternative',
-        'artist_id' => @artist1.id
+        'artist_id' => @artist1.id,
+        'buy_price' => 6,
+        'sell_price' => 10
       }
     )
 
@@ -30,7 +32,9 @@ class TestAlbum < MiniTest::Test
         'title' => 'Amnesiac',
         'stock' => 5,
         'genre' => 'alternative',
-        'artist_id' => @artist1.id
+        'artist_id' => @artist1.id,
+        'buy_price' => 6,
+        'sell_price' => 10
       }
     )
 
@@ -40,7 +44,9 @@ class TestAlbum < MiniTest::Test
         'title' => 'A Moon Shaped Pool',
         'stock' => 10,
         'genre' => 'alternative',
-        'artist_id' => @artist1.id
+        'artist_id' => @artist1.id,
+        'buy_price' => 6,
+        'sell_price' => 10
       }
     )
   end
@@ -65,6 +71,14 @@ class TestAlbum < MiniTest::Test
     assert_equal("Low", @album1.stock_level)
     assert_equal("Medium", @album2.stock_level)
     assert_equal("High", @album3.stock_level)
+  end
+
+  def test_album_has_buy_price()
+    assert_equal(6, @album1.buy_price)
+  end
+
+  def test_album_has_sell_price()
+    assert_equal(10, @album1.sell_price)
   end
 
 end

@@ -1,10 +1,10 @@
 <h1><%= @album.title %></h1>
-<h2><%= @album.artist.name %></h2>
+<h2><a href="/artists/<%= @album.artist.id %>"><%= @album.artist.name %></a></h2>
 <p>Genre: <%= @album.genre %></p>
 <p>Stock: <%= @album.stock %></p>
 <form action="/albums/<%= @album.id %>/delete" method="post">
   <input type="submit" value="Delete Album">
 </form>
 <form action="/albums/<%= @album.id %>/update" method="get">
-  <input type="submit" value="Update Artist">
+  <input type="submit" value="Update Album">
 </form>

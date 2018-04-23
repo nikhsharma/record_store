@@ -3,7 +3,7 @@ require_relative('../db/sql_runner.rb')
 class Album
 
   attr_reader :id, :artist_id
-  attr_accessor :title, :stock, :genre
+  attr_accessor :title, :stock, :genre, :buy_price, :sell_price
 
   def initialize(options)
     @id = options['id'].to_i
@@ -11,6 +11,8 @@ class Album
     @stock = options['stock'].to_i
     @genre = options['genre']
     @artist_id = options['artist_id'].to_i
+    @buy_price = options['buy_price'].to_i
+    @sell_price = options['sell_price'].to_i
   end
 
   def save()

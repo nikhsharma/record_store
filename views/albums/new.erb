@@ -1,8 +1,9 @@
-<h1>Add new Album</h1>
+<h1>Add new Album | <a href="/artists/new">Add new Artist</a> </h1>
 
 <form action="/albums" method="post">
   <label for="artist_id">Select an artist:</label>
   <select  name="artist_id" id="artist_id">
+
     <% @artists.each do |artist| %>
     <option value=<%= artist.id %>><%= artist.name %></option>
     <% end %>

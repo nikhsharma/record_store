@@ -15,7 +15,7 @@ end
 post '/artists' do
   artist = Artist.new(params)
   artist.save()
-  redirect to '/artists'
+  redirect to '/albums/new'
 end
 
 get '/artists/:id' do
