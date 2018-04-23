@@ -7,13 +7,13 @@ body {
 
 nav {
   border-bottom: 1px solid lightslategray;
+  height: 5vh;
 }
 
 nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 3vh;
 }
 
 nav li {
@@ -21,7 +21,6 @@ nav li {
   align-items: center;
   justify-content: center;
   list-style-type: none;
-  padding: 1em;
 }
 
 
@@ -50,9 +49,21 @@ a {
 
 #random-covers {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .cover-image {
-  height: 25vw;
-  width: 25vw;
+  height: 20vw;
+  width: 20vw;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 92vh;
+}
+
+#home h1 {
+  font-size: 2rem;
 }

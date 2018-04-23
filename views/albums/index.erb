@@ -8,6 +8,7 @@
 <div class="albums-content">
 <h1><a href="/albums/<%= album.id %>"><%= album.title %></a></h1>
 <a href="/artists/<%= album.artist.id%>"><%= album.artist.name %></a>
+<p>Stock level: <%= album.stock_level %></p>
 </div>
 </div></a>
 <% end %>
