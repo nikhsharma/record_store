@@ -15,7 +15,7 @@ You should be able to add stock, which would have an Artist and Album as well as
 
 ### Possible Extensions:
 
-- Add a buy and sell price to each stock item
-- Calculate the possible markup on items and show on inventory page
-- Add a genre to an Album
+- <strike>Add a buy and sell price to each stock item</strike>
+- <strike>Calculate the possible markup on items and show on inventory page</strike>
+- <strike>Add a genre to an Album</strike>
 - Any other ideas you might come up with
