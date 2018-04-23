@@ -1,6 +1,8 @@
 <h1 class="center">All Artists | <a class="new-link" href="/artists/new">Add new Artist</a></h1>
 
 <% @artists.each do |artist| %>
-<p><a href="/artists/<%= artist.id%>"><%= artist.name %></a></p>
-<hr />
+<a href="/artists/<%= artist.id%>">
+<section class="artist black-overlay" style="background: url(<%= artist.profile_image %>);">
+<h1><%= artist.name %></h1>
+</section></a>
 <% end %>
