@@ -14,17 +14,15 @@
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: 50% 30% !important;
-  background-color: rgba(0,0,0,0.3) !important;
+  background-color: rgba(0,0,0,0.4) !important;
   background-blend-mode: darken !important;
   transition: 0.5s;
 }
 
-
 .artist:hover {
   background-blend-mode: lighten !important;
-  transition: 0.5s;
+  transition: 0.2s;
 }
-
 
 .artist h1 {
   width: 100vw;
