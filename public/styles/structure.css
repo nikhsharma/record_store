@@ -96,6 +96,10 @@ padding: 0;
   margin-bottom: 0;
 }
 
+.albums p {
+  margin: 0;
+}
+
 .new-link {
   margin-left: 10px;
 }

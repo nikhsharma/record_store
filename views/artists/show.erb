@@ -1,10 +1,17 @@
-<h1><%= @artist.name %></h1>
+<h1 class="center"><%= @artist.name %></h1>
+
+<div class="all-albums">
 <% @artist.albums.each do |album| %>
-<p><a href="/albums/<%= album.id %>"> <%= album.title %></a></p>
-<p><%= album.genre %></p>
-<p><%= album.stock %></p>
-<hr />
+<a href="/albums/<%= album.id %>"><div class="albums">
+<img class="thumbnail" src="<%= album.artwork %>" alt="">
+<div class="albums-content">
+<h1><a href="/albums/<%= album.id %>"> <%= album.title %></a></h1>
+<p>Genre: <%= album.genre %></p>
+<p>Stock: <%= album.stock %></p>
+</div>
+</div></a>
 <% end %>
+</div>
 
 <form action="/artists/<%= @artist.id %>/delete" method="post">
   <input type="submit" value="Delete Artist">
