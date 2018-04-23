@@ -35,7 +35,8 @@ album1 = Album.new(
     'genre' => 'alternative',
     'artist_id' => artist1.id,
     'buy_price' => 6,
-    'sell_price' => 10
+    'sell_price' => 10,
+    'artwork' => '/images/kid_a.jpg'
   }
 )
 
@@ -46,7 +47,8 @@ album2 = Album.new(
     'genre' => 'alternative',
     'artist_id' => artist1.id,
     'buy_price' => 8,
-    'sell_price' => 11
+    'sell_price' => 11,
+    'artwork' => '/images/a_moon_shaped_pool.jpg'
   }
 )
 
@@ -57,7 +59,8 @@ album3 = Album.new(
     'genre' => 'jazz',
     'artist_id' => artist2.id,
     'buy_price' => 4,
-    'sell_price' => 8
+    'sell_price' => 8,
+    'artwork' => '/images/v2-0.jpg'
   }
 )
 
@@ -68,7 +71,8 @@ album4 = Album.new(
     'genre' => 'jazz',
     'artist_id' => artist2.id,
     'buy_price' => 6,
-    'sell_price' => 10
+    'sell_price' => 10,
+    'artwork' => '/images/man_made_object.jpg'
   }
 )
 
@@ -79,7 +83,8 @@ album5 = Album.new(
     'genre' => 'R&B',
     'artist_id' => artist3.id,
     'buy_price' => 7,
-    'sell_price' => 11
+    'sell_price' => 11,
+    'artwork' => '/images/awaken_my_love.jpg'
   }
 )
 
