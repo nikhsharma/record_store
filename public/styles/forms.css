@@ -8,3 +8,39 @@
 .search-bar input {
   border-radius: 5px;
 }
+
+.new-album {
+  display:flex;
+  flex-direction: column;
+  width: 25vw;
+  align-items: space-between;
+  margin-left: 37.5vw;
+  margin-right: 37.5vw;
+}
+
+.new-album input {
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid black;
+  margin: 5px;
+  float:right;
+  font-size: 1.2rem;
+}
+
+.new-album select {
+  margin: 5px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.new-album input[type=submit] {
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+
+.new-album input[type=submit]:hover {
+  cursor: pointer;
+  background-color: lightslategray;
+  color: white;
+  transition: 0.2s;
+}
