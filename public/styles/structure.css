@@ -39,3 +39,20 @@ a {
 .new-link {
   margin-left: 10px;
 }
+
+#new-album {
+  background-image: url('../images/childish_gambino_profile.jpeg')
+}
+
+#new-album h1 {
+  background-color: white;
+}
+
+#random-covers {
+  display: flex;
+}
+
+.cover-image {
+  height: 25vw;
+  width: 25vw;
+}

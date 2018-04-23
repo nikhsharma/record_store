@@ -14,15 +14,19 @@
   flex-direction: column;
   width: 25vw;
   align-items: space-between;
+  justify-content: center;
   margin-left: 37.5vw;
   margin-right: 37.5vw;
+  background-color: white;
+  height: 90vh;
+  padding: 10px;
 }
 
 .new-album input {
   border-radius: 5px;
   box-shadow: none;
   border: 1px solid black;
-  margin: 5px;
+  margin: 10px;
   float:right;
   font-size: 1.2rem;
 }

@@ -9,6 +9,7 @@ require_relative('controllers/inventory_controller.rb')
 
 get '/' do
   @artists = Artist.all()
+  @albums = Album.all()
   erb(:index)
 end
 

@@ -1,6 +1,8 @@
-<h1 class="center">Add new Album | <a class="new-link" href="/artists/new">Add new Artist</a> </h1>
+<section id="new-album">
+
 
 <form class="new-album" action="/albums" method="post">
+  <h1 class="center">Add new Album | <a class="new-link" href="/artists/new">Add new Artist</a> </h1>
   <label class="center" for="artist_id">Select an artist:</label>
   <select  name="artist_id" id="artist_id">
     <% @artists.each do |artist| %>
@@ -40,3 +42,5 @@
 <br />
   <input type='submit' value="Create Album">
 </form>
+
+</section>

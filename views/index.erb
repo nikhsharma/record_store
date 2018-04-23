@@ -31,3 +31,10 @@
   <% end %>
 
 </table>
+
+<section id="random-covers">
+  <%  covers = @albums.map { |album| album.artwork }.sample(4) %>
+  <% covers.each do |cover| %>
+  <img class="cover-image" src="<%= cover %>" alt="">
+  <% end %>
+</section>
