@@ -81,4 +81,8 @@ class TestAlbum < MiniTest::Test
     assert_equal(10, @album1.sell_price)
   end
 
+  def test_get_markup()
+    assert_equal(4, @album1.markup)
+  end
+
 end

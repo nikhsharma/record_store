@@ -47,6 +47,10 @@ class Album
       return "High" if @stock >= 7
   end
 
+  def markup()
+    return @sell_price - @buy_price    
+  end
+
   def self.find_by_id(id)
     sql = "SELECT * FROM albums WHERE id = $1;"
     values = [id]
