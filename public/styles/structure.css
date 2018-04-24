@@ -99,3 +99,20 @@ nav .link:hover a {
   margin-left: 10px;
   padding: 5px;
 }
+
+.fullbg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.bgvideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}

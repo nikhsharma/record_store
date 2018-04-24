@@ -1,30 +1,31 @@
-
-<!-- <video src="/videos/spinning_vinyl.mp4" autoplay loop muted>
-</video> -->
+<!-- <div class="fullbg">
+  <video class="bgvideo" type="video/mp4" src="https://www.videvo.net/videvo_files/converted/2015_08/preview/Cassette_Tape.mp419377.webm" autoplay loop muted>
+  </video>
+</div> -->
 
 <section id="home">
 
-<h1 class="center">Records & Stuff</h1>
-<p class="center">Artist/Album not found. Check the spelling, or look at the <a href="/artists" class="button artists-link">list of artists</a></p>
-<form class="center search" action="/search" method="get">
-  <label for="name"></label>
-  <input type="text" name="name">
-  <input type="submit" class="button" value="Search Artists">
-</form>
+  <h1 class="center">Records & Stuff</h1>
+  <p class="center">Artist/Album not found. Check the spelling, or look here: <a href="/artists" class="button artists-link">list of artists</a> <a href="/albums" class="button artists-link">list of albums</a></p>
+  <form class="center search" action="/search" method="get">
+    <label for="name"></label>
+    <input type="text" name="name">
+    <input type="submit" class="button" value="Search Artists/Albums">
+  </form>
 
 
 
-<section class="home-album-tiles">
-<% @albums.sample(5).each do |album| %>
-<a href="/albums/<%= album.id %>">
-<div class="home-album-div" style="background-image: url(<%= album.artwork %>);">
-  <h1><%= album.title %></h1>
-  <h2><%= album.artist.name %></h2>
-  <p>Stock Level: <%= album.stock_level %></p>
-</div>
-</a>
-<% end %>
-</section>
+  <section class="home-album-tiles">
+    <% @albums.sample(5).each do |album| %>
+    <a href="/albums/<%= album.id %>">
+      <div class="home-album-div" style="background-image: url(<%= album.artwork %>);">
+        <h1><%= album.title %></h1>
+        <h2><%= album.artist.name %></h2>
+        <p>Stock Level: <%= album.stock_level %></p>
+      </div>
+    </a>
+    <% end %>
+  </section>
 
 
 </section>
