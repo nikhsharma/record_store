@@ -13,7 +13,27 @@ post '/inventory/:id/update' do
   redirect to '/inventory'
 end
 
-get '/inventory/sort-by-title' do
-  @albums = Album.all_by_title()
-  erb(:"inventory/sort_by_title")
+get '/inventory/sort-by-title-asc' do
+  @albums = Album.all_by_title_asc()
+  erb(:"inventory/sort-asc")
+end
+
+get '/inventory/sort-by-title-desc' do
+  @albums = Album.all_by_title_desc()
+  erb(:"inventory/sort-desc")
+end
+
+get '/inventory/sort-by-stock-asc' do
+  @albums = Album.all_by_stock_asc()
+  erb(:"inventory/sort-asc")
+end
+
+get '/inventory/sort-by-stock-desc' do
+  @albums = Album.all_by_stock_desc()
+  erb(:"inventory/sort-desc")
+end
+
+get '/inventory/sort-by-artist-desc' do
+  @artists = Artist.all_desc()
+  erb(:"inventory/index-desc")
 end

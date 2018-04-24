@@ -65,8 +65,26 @@ class Album
     return albums.map { |album| Album.new(album)}
   end
 
-  def self.all_by_title()
+  def self.all_by_title_asc()
     sql = "SELECT * FROM albums ORDER BY title ASC;"
+    albums = SqlRunner.run(sql)
+    return albums.map { |album| Album.new(album)}
+  end
+
+  def self.all_by_title_desc()
+    sql = "SELECT * FROM albums ORDER BY title desc;"
+    albums = SqlRunner.run(sql)
+    return albums.map { |album| Album.new(album)}
+  end
+
+  def self.all_by_stock_asc()
+    sql = "SELECT * FROM albums ORDER BY stock ASC;"
+    albums = SqlRunner.run(sql)
+    return albums.map { |album| Album.new(album)}
+  end
+
+  def self.all_by_stock_desc()
+    sql = "SELECT * FROM albums ORDER BY stock DESC;"
     albums = SqlRunner.run(sql)
     return albums.map { |album| Album.new(album)}
   end
