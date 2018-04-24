@@ -13,17 +13,20 @@
   </tr>
   <% @artists.each do |artist| %>
   <tr>
-    <td class="lg"> <a href="/artists/<%= artist.id %>"><%= artist.name %></a> </td>
+    <td class="lg"> <a href="/artists/<%= artist.id %>"><%= artist.name %></a>
+    <hr /></td>
     <td class="lg">
       <% artist.albums.each do |album| %>
       <a href="/albums/<%= album.id %>"><%= album.title %></a>
       <br />
+      <hr />
       <% end %>
     </td>
     <td class="lg">
       <% artist.albums.each do |album| %>
       <%= album.genre %>
       <br />
+      <hr />
       <% end %>
     </td>
     <td class="sm">
@@ -40,24 +43,28 @@
       <% artist.albums.each do |album| %>
       <%= album.stock_level %>
       <br />
+      <hr />
       <% end %>
     </td>
     <td class="sm">
       <% artist.albums.each do |album| %>
-      <%= album.buy_price %>
+      £<%= album.buy_price %>
       <br />
+      <hr />
       <% end %>
     </td>
     <td class="sm">
       <% artist.albums.each do |album| %>
-      <%= album.sell_price %>
+      £<%= album.sell_price %>
       <br />
+      <hr />
       <% end %>
     </td>
     <td class="sm">
       <% artist.albums.each do |album| %>
-      <%= album.markup %>
+      £<%= album.markup %>
       <br />
+      <hr />
       <% end %>
     </td>
   </tr>

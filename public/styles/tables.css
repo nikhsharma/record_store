@@ -31,6 +31,10 @@ display: flex;
   width: 50px;
 }
 
+#inventory hr {
+  opacity: 0;
+}
+
 
 
 .lg {
