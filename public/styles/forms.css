@@ -148,3 +148,12 @@
 #update-album h1 {
   font-size: 2rem;
 }
+
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  font-size: 0.8em;
+  position: relative;
+  right: 20px;
+}

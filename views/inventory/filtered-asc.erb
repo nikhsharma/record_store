@@ -1,29 +1,34 @@
 <h1 class="center">Inventory</h1>
 
-<form class="filter" action="/inventory/filter" method="get">
+<div class="filter">
+<form action="/inventory/filter" method="get">
   <select name="genre" genre>
     <% @all_genres.each do |genre| %>
     <option value="<%= genre['genre'] %>"  <%= "selected" if genre['genre'] == @genre %>><%= genre['genre'] %></option>
     <% end %>
   </select>
-  <input type="submit" value="Filter">
+  <input type="submit" value="Update Filter">
 </form>
+<form action="/inventory" method="get">
+  <input type="submit" value="Remove Filter">
+</form>
+</div>
 
 <table id="inventory" class="center">
   <tr>
-    <th class="lg"><a href="/inventory">Artist</a></th>
-    <th class="lg"><a href="/inventory/sort-by-title-asc">Album</a></th>
+    <th class="lg"><a href="/inventory/filter-artist-desc/<%= @genre %>">Artist</a></th>
+    <th class="lg"><a href="/inventory/filter-title-desc/<%= @genre %>">Album</a></th>
     <th class="lg" >Genre</th>
-    <th class="sm"><a href="/inventory/sort-by-stock-asc">Stock</a></th>
+    <th class="sm"><a href="/inventory/filter-stock-desc/<%= @genre %>">Stock</a></th>
     <th class="lg">Stock Level</th>
     <th class="sm">Buy Price</th>
     <th class="sm">Sell Price</th>
     <th class="sm">Markup</th>
   </tr>
   <% @albums.each do |album| %>
+  <% if album.genre == @genre %>
   <tr>
-    <td class="lg"> <a href="/artists/<%= album.artist.id %>"><%= album.artist.name %></a>
-    <hr /></td>
+    <td class="lg"> <a href="/artists/<%= album.artist.id %>"><%= album.artist.name %></a></td>
     <td class="lg">
       <a href="/albums/<%= album.id %>"><%= album.title %></a>
     </td>
@@ -39,6 +44,8 @@
     </td>
     <td class="lg">
       <%= album.stock_level %>
+      <br />
+      <hr />
     </td>
     <td class="sm">
       £<%= album.buy_price %>
@@ -48,7 +55,10 @@
     </td>
     <td class="sm">
       £<%= album.markup %>
+      <br />
+      <hr />
+      <% end %>
+      <% end %>
     </td>
   </tr>
-  <% end %>
 </table>

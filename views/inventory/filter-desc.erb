@@ -1,23 +1,25 @@
 <h1 class="center">Inventory</h1>
 
-<form class="filter" action="/inventory/filter" method="get">
+<div class="filter">
+<form action="/inventory/filter" method="get">
   <select name="genre" genre>
     <% @all_genres.each do |genre| %>
     <option value="<%= genre['genre'] %>"  <%= "selected" if genre['genre'] == @genre %>><%= genre['genre'] %></option>
     <% end %>
   </select>
-  <input type="submit" value="Filter">
+  <input type="submit" value="Update Filter">
 </form>
-<form class="filter" action="/inventory" method="get">
+<form action="/inventory" method="get">
   <input type="submit" value="Remove Filter">
 </form>
+</div>
 
 <table id="inventory" class="center">
   <tr>
-    <th class="lg"><a href="/inventory">Artist</a></th>
-    <th class="lg"><a href="/inventory/sort-by-title-asc">Album</a></th>
+    <th class="lg"><a href="/inventory/filter-artist-asc/<%= @genre %>">Artist</a></th>
+    <th class="lg"><a href="/inventory/filter-title-asc/<%= @genre %>">Album</a></th>
     <th class="lg" >Genre</th>
-    <th class="sm"><a href="/inventory/sort-by-stock-desc">Stock</a></th>
+    <th class="sm"><a href="/inventory/filter-stock-desc/<%= @genre %>">Stock</a></th>
     <th class="lg">Stock Level</th>
     <th class="sm">Buy Price</th>
     <th class="sm">Sell Price</th>

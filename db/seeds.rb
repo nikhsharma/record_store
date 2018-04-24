@@ -59,7 +59,7 @@ kida = Album.new(
   {
     'title' => 'Kid A',
     'stock' => 2,
-    'genre' => 'alternative',
+    'genre' => 'Alternative',
     'artist_id' => radiohead.id,
     'buy_price' => 6,
     'sell_price' => 10,
@@ -71,7 +71,7 @@ amoonshapedpool = Album.new(
   {
     'title' => 'A Moon Shaped Pool',
     'stock' => 3,
-    'genre' => 'alternative',
+    'genre' => 'Alternative',
     'artist_id' => radiohead.id,
     'buy_price' => 8,
     'sell_price' => 11,
@@ -83,7 +83,7 @@ v20 = Album.new(
   {
     'title' => 'v2.0',
     'stock' => 1,
-    'genre' => 'jazz',
+    'genre' => 'Jazz',
     'artist_id' => gogopenguin.id,
     'buy_price' => 4,
     'sell_price' => 8,
@@ -95,7 +95,7 @@ manmadeobject = Album.new(
   {
     'title' => 'Man Made Object',
     'stock' => 1,
-    'genre' => 'jazz',
+    'genre' => 'Jazz',
     'artist_id' => gogopenguin.id,
     'buy_price' => 6,
     'sell_price' => 10,
@@ -131,7 +131,7 @@ soundandcolor = Album.new(
   {
     'title' => 'Sound and Color',
     'stock' => 8,
-    'genre' => 'alternative',
+    'genre' => 'Alternative',
     'artist_id' => alabamashakes.id,
     'buy_price' => 5,
     'sell_price' => 10,
@@ -143,7 +143,7 @@ anawesomewave = Album.new(
   {
     'title' => 'An Awesome Wave',
     'stock' => 8,
-    'genre' => 'alternative',
+    'genre' => 'Alternative',
     'artist_id' => altj.id,
     'buy_price' => 4,
     'sell_price' => 9,
