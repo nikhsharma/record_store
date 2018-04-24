@@ -62,8 +62,8 @@ class Album
   def self.find_by_title(title)
     sql = "SELECT * FROM albums WHERE title = $1;"
     values = [title]
-    result =  SqlRunner.run(sql, values)
-    return Album.new(result[0])
+    albums =  SqlRunner.run(sql, values)
+    return albums.map { |album| Album.new(album)}[0]
   end
 
   def self.all()
