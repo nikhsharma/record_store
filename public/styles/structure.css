@@ -43,10 +43,6 @@ a {
   background-image: url('../images/childish_gambino_profile.jpeg')
 }
 
-#new-album h1 {
-  background-color: white;
-}
-
 #random-covers {
   display: flex;
   flex-wrap: wrap;
@@ -66,4 +62,9 @@ a {
 
 #home h1 {
   font-size: 2rem;
+}
+
+#new-artist {
+  height: 100vh;
+  background-image: url("/images/gogo_penguin_profile.jpg");
 }

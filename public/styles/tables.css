@@ -1,9 +1,38 @@
 table {
   border-collapse: collapse;
-  display: flex;
 }
 
-td, th {
+th {
   border: 1px solid black;
   padding: 0.5rem;
+}
+
+td {
+  border: 1px solid lightslategray;
+  padding: 0.5rem;
+}
+
+
+#inventory {
+  width: 100vw;
+  text-align: center;
+}
+
+#inventory tbody {
+  width: 100vw;
+}
+
+#inventory tr {
+display: flex;
+flex-dir
+}
+
+
+
+.lg {
+  width: 15vw;
+}
+
+.sm {
+  width: 10vw;
 }
