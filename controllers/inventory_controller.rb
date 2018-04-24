@@ -37,3 +37,10 @@ get '/inventory/sort-by-artist-desc' do
   @artists = Artist.all_desc()
   erb(:"inventory/index-desc")
 end
+
+get '/inventory/filter' do
+  @artists= Artist.all()
+  @all_genres = Album.all_genres()
+  @genre = params['genre']
+  erb(:"inventory/filter")
+end

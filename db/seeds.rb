@@ -131,7 +131,7 @@ soundandcolor = Album.new(
   {
     'title' => 'Sound and Color',
     'stock' => 8,
-    'genre' => 'R&B',
+    'genre' => 'alternative',
     'artist_id' => alabamashakes.id,
     'buy_price' => 5,
     'sell_price' => 10,
@@ -143,7 +143,7 @@ anawesomewave = Album.new(
   {
     'title' => 'An Awesome Wave',
     'stock' => 8,
-    'genre' => 'R&B',
+    'genre' => 'alternative',
     'artist_id' => altj.id,
     'buy_price' => 4,
     'sell_price' => 9,

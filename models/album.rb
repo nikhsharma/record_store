@@ -89,6 +89,15 @@ class Album
     return albums.map { |album| Album.new(album)}
   end
 
+  def self.all_genres()
+    sql = "SELECT genre FROM albums;"
+    genres = SqlRunner.run(sql)
+    all_genres = genres.map { |genre| genre}
+    return all_genres.uniq()
+  end
+
+
+
   def self.delete_all()
     sql = "DELETE FROM albums;"
     SqlRunner.run(sql)

@@ -1,5 +1,16 @@
 <h1 class="center">Inventory</h1>
 
+<form class="filter" action="/inventory/filter" method="get">
+  <select name="genre" genre>
+    <% @artists.each do |artist| %>
+    <% artist.albums.each do |album| %>
+    <option value="<%= album.genre %>"><%= album.genre %></option>
+    <% end %>
+    <% end %>
+  </select>
+  <input type="submit" value="Filter">
+</form>
+
 <table id="inventory" class="center">
   <tr>
     <th class="lg"><a href="/inventory">Artist</a></th>
