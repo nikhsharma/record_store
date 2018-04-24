@@ -59,6 +59,13 @@ class Album
     return Album.new(result[0])
   end
 
+  def self.find_by_title(title)
+    sql = "SELECT * FROM albums WHERE title = $1;"
+    values = [title]
+    result =  SqlRunner.run(sql, values)
+    return Album.new(result[0])
+  end
+
   def self.all()
     sql = "SELECT albums.* FROM albums INNER JOIN artists ON albums.artist_id = artists.id ORDER BY artists.name ASC;"
     albums = SqlRunner.run(sql)
@@ -95,8 +102,6 @@ class Album
     all_genres = genres.map { |genre| genre}
     return all_genres.uniq()
   end
-
-
 
   def self.delete_all()
     sql = "DELETE FROM albums;"

@@ -85,4 +85,8 @@ class TestAlbum < MiniTest::Test
     assert_equal(4, @album1.markup)
   end
 
+  def test_find_by_title()
+    assert_equal("Kid A", Album.find_by_title("Kid A").title)
+  end
+
 end

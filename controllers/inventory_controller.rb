@@ -40,8 +40,8 @@ get '/inventory/sort-by-stock-desc' do
 end
 
 get '/inventory/sort-by-artist-desc' do
-  @all_genres = Album.all_genres()
   @artists = Artist.all_desc()
+  @all_genres = Album.all_genres()
   erb(:"inventory/index-desc")
 end
 

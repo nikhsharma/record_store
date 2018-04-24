@@ -1,7 +1,7 @@
 <h1 class="center">Inventory</h1>
 
 <form class="filter" action="/inventory/filter" method="get">
-  <select name="genre" genre>
+  Filter by genre:<select name="genre" genre>
     <% @all_genres.each do |genre| %>
     <option value="<%= genre['genre'] %>"  <%= "selected" if genre['genre'] == @genre %>><%= genre['genre'] %></option>
     <% end %>
