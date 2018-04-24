@@ -24,7 +24,11 @@ td {
 
 #inventory tr {
 display: flex;
-flex-dir
+}
+
+
+#inventory form input {
+  width: 50px;
 }
 
 

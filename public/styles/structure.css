@@ -47,11 +47,14 @@ a {
 #random-covers {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .cover-image {
-  height: 20vw;
-  width: 20vw;
+  height: 250px;
+  width: 250px;
+  margin: 10px;
 }
 
 #home {

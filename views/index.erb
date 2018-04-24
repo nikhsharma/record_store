@@ -8,10 +8,20 @@
   <input type="submit" class="button" value="Search Artists">
 </form>
 
-<section id="random-covers">
-  <%#  covers = @albums.map { |album| album.artwork }.sample(4) %>
-  <% @albums.sample(5).each do |album| %>
-  <a href="/albums/<%= album.id %>"><img class="cover-image" src="<%= album.artwork %>" alt=""></a>
-  <% end %>
+
+
+
+<section class="home-album-tiles">
+<% @albums.sample(5).each do |album| %>
+<a href="/albums/<%= album.id %>">
+<div class="home-album-div" style="background-image: url(<%= album.artwork %>);">
+  <h1><%= album.title %></h1>
+  <h2><%= album.artist.name %></h2>
+  <p>Stock Level: <%= album.stock_level %></p>
+</div>
+</a>
+<% end %>
 </section>
+
+
 </section>

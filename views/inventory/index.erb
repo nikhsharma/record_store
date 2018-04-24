@@ -28,7 +28,11 @@
     </td>
     <td class="sm">
       <% artist.albums.each do |album| %>
-      <%= album.stock %>
+      <form action="/inventory/<%= album.id %>/update" method="post">
+        <label for="stock"></label>
+        <input type="number" name="stock" id="stock" value="<%= album.stock %>">
+        <input type="submit" class="button" value="Update">
+      </form>
       <br />
       <% end %>
     </td>

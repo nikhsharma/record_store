@@ -112,3 +112,61 @@ padding: 0;
   font-size: 200%;
   transition: 0.2s;
 }
+
+.home-album-div {
+  height: 250px;
+  width: 250px;
+  margin: 10px;
+  padding: 0;
+  background-color: rgba(0,0,0,0.4) !important;
+  background-blend-mode: darken !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.home-album-div:hover {
+  background-blend-mode: lighten !important;
+  font-size: 120%;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.home-album-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.home-album-tiles h1 {
+  color: white;
+  background-color: rgba(0,0,0,0.2);
+  margin: 0;
+  width: 250px;
+  text-align: center;
+  font-size: 1em !important;
+}
+
+.home-album-tiles h2 {
+  color: white;
+  background-color: rgba(0,0,0,0.2);
+  margin: 0;
+  width: 250px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.home-album-tiles p {
+  color: white;
+  background-color: rgba(0,0,0,0.2);
+  margin: 0;
+  width: 250px;
+  text-align: center;
+}
