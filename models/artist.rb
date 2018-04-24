@@ -32,7 +32,7 @@ class Artist
   end
 
   def albums()
-    sql = "SELECT * FROM albums WHERE artist_id = $1;"
+    sql = "SELECT * FROM albums WHERE artist_id = $1 ORDER BY title;"
     values = [@id]
     albums = SqlRunner.run(sql, values)
     return albums.map { |album| Album.new(album)}

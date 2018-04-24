@@ -12,3 +12,8 @@ post '/inventory/:id/update' do
   @album.update()
   redirect to '/inventory'
 end
+
+get '/inventory/sort-by-title' do
+  @albums = Album.all_by_title()
+  erb(:"inventory/sort_by_title")
+end

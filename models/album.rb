@@ -60,7 +60,13 @@ class Album
   end
 
   def self.all()
-    sql = "SELECT albums.* FROM albums INNER JOIN artists on albums.artist_id = artists.id ORDER BY artists.name ASC;"
+    sql = "SELECT albums.* FROM albums INNER JOIN artists ON albums.artist_id = artists.id ORDER BY artists.name ASC;"
+    albums = SqlRunner.run(sql)
+    return albums.map { |album| Album.new(album)}
+  end
+
+  def self.all_by_title()
+    sql = "SELECT * FROM albums ORDER BY title ASC;"
     albums = SqlRunner.run(sql)
     return albums.map { |album| Album.new(album)}
   end

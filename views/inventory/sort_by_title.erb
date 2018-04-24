@@ -11,61 +11,34 @@
     <th class="sm">Sell Price</th>
     <th class="sm">Markup</th>
   </tr>
-  <% @artists.each do |artist| %>
+  <% @albums.each do |album| %>
   <tr>
-    <td class="lg"> <a href="/artists/<%= artist.id %>"><%= artist.name %></a>
+    <td class="lg"> <a href="/artists/<%= album.artist.id %>"><%= album.artist.name %></a>
     <hr /></td>
     <td class="lg">
-      <% artist.albums.each do |album| %>
       <a href="/albums/<%= album.id %>"><%= album.title %></a>
-      <br />
-      <hr />
-      <% end %>
     </td>
     <td class="lg">
-      <% artist.albums.each do |album| %>
       <%= album.genre %>
-      <br />
-      <hr />
-      <% end %>
     </td>
     <td class="sm">
-      <% artist.albums.each do |album| %>
       <form action="/inventory/<%= album.id %>/update" method="post">
         <label for="stock"></label>
         <input type="number" name="stock" id="stock" value="<%= album.stock %>">
         <input type="submit" class="button" value="Update">
       </form>
-      <br />
-      <% end %>
     </td>
     <td class="lg">
-      <% artist.albums.each do |album| %>
       <%= album.stock_level %>
-      <br />
-      <hr />
-      <% end %>
     </td>
     <td class="sm">
-      <% artist.albums.each do |album| %>
       £<%= album.buy_price %>
-      <br />
-      <hr />
-      <% end %>
     </td>
     <td class="sm">
-      <% artist.albums.each do |album| %>
       £<%= album.sell_price %>
-      <br />
-      <hr />
-      <% end %>
     </td>
     <td class="sm">
-      <% artist.albums.each do |album| %>
       £<%= album.markup %>
-      <br />
-      <hr />
-      <% end %>
     </td>
   </tr>
   <% end %>
