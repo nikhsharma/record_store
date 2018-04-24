@@ -5,34 +5,8 @@
 <form class="center search" action="/search" method="get">
   <label for="name"></label>
   <input type="text" name="name" >
-  <input type="submit" value="Search Artists">
+  <input type="submit" class="button" value="Search Artists">
 </form>
-
-<!-- <table class="center">
-  <tr>
-    <th>Artist</th>
-    <th>Albums</th>
-    <th>Stock Level</th>
-  </tr>
-  <% @artists.each do |artist| %>
-  <tr>
-    <td> <a href="/artists/<%= artist.id %>"><%= artist.name %></a> </td>
-    <td>
-    <% artist.albums.each do |album| %>
-    <a href="/albums/<%= album.id %>"><%= album.title %></a>
-    <br />
-    <% end %>
-  </td>
-    <td>
-    <% artist.albums.each do |album| %>
-    <%= album.stock_level %>
-    <br />
-    <% end %>
-  </td>
-  </tr>
-  <% end %>
-
-</table> -->
 
 <section id="random-covers">
   <%#  covers = @albums.map { |album| album.artwork }.sample(4) %>

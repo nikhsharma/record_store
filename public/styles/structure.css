@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0, auto;
   width: 100vw;
+  background-color: #f2f5fc;
 }
 
 nav {
@@ -57,11 +58,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 92vh;
+  height: 85vh;
 }
 
 #home h1 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 #new-artist {

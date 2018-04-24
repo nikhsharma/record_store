@@ -1,6 +1,15 @@
+<section id="update-artist" style="background-image: url(<%= @artist.profile_image %>);">
+
 <form action="/artists/<%= @artist.id %>/update" method="post">
+  <h1>Update Artist</h1>
+
   <label for="name">Name:</label>
   <input type="text" name="name" id="name" value="<%= @artist.name %>">
 
-  <input type="submit" value="Update">
+  <label for="profile_image">Profil Image Link:</label>
+  <input type="text" name="profile_image" id="profile_image" value="<%= @artist.profile_image %>">
+
+  <input type="submit" class="button" value="Update">
 </form>
+
+</section>

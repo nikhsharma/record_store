@@ -1,5 +1,8 @@
 .search {
+  position: relative;
+  align-items: center;
   height: 50vh;
+  top: 50px;
 }
 
 .search input {
@@ -8,7 +11,10 @@
   margin-bottom: 40vh;
   margin-top: 10vh;
   font-size: 1.2rem;
+  background: none;
+  transition: 0.2s;
 }
+
 
 .search-bar input {
   border-radius: 5px;
@@ -22,7 +28,7 @@
   justify-content: center;
   margin:auto;
   background-color: rgba(255, 255, 255, 0.8);
-  height: 90vh;
+  height: 92vh;
   padding: 10px;
 }
 
@@ -43,20 +49,42 @@
 }
 
 .new-album label {
-position: relative;
-top: 15px;
+  position: relative;
+  top: 15px;
 }
 
-.new-album input[type=submit] {
-  font-size: 1.5rem;
-  transition: 0.2s;
+#update-artist form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40vw;
+  height: 95vh;
+  margin: auto;
+  font-size: 1.2rem;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
-.new-album input[type=submit]:hover {
-  cursor: pointer;
-  background-color: lightslategray;
-  color: white;
-  transition: 0.2s;
+#update-artist input {
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+#update-artist {
+  height: 95vh;
+}
+
+
+
+#update-artist h1 {
+  font-size: 2rem;
+  margin-bottom: 10vh;
+}
+
+#new-artist {
+  height: 95vh;
 }
 
 #new-artist form {
@@ -65,15 +93,58 @@ top: 15px;
   width: 20vw;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.8);
-  height: 100vh;
-  padding: 10vw;
+  height: 95vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
 #new-artist form input {
-font-size: 1.2rem;
-text-align: center;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px;
 }
 
 #new-artist h1 {
+  font-size: 2rem;
+}
+
+#update-album {
+  width: 100vw;
+  height: 95vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#update-album form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 20vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 85vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 10vh;
+  font-size: 1rem;
+}
+
+#update-album input {
+  float: right;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background: none;
+  background-color: white;
+  font-size: 1rem;
+
+}
+
+#update-album label {
+  position: relative;
+  top: 10px;
+}
+
+#update-album h1 {
   font-size: 2rem;
 }
