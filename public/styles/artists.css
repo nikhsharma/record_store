@@ -58,3 +58,8 @@
     font-size: 4rem;
     transition: 0.2s;
 }
+
+#update-artist {
+  background-repeat: no-repeat;
+  background-size: cover;
+}

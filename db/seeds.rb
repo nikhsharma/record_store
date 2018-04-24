@@ -5,97 +5,160 @@ require_relative('../models/album.rb')
 Album.delete_all()
 Artist.delete_all()
 
-artist1 = Artist.new(
+radiohead = Artist.new(
   {
     'name' => 'Radiohead',
     'profile_image' => '/images/radiohead_profile.jpg'
   }
 )
 
-artist2 = Artist.new(
+gogopenguin = Artist.new(
   {
     'name' => 'GoGo Penguin',
     'profile_image' => '/images/gogo_penguin_profile.jpg'
   }
 )
 
-artist3 = Artist.new(
+childishgambino = Artist.new(
   {
     'name' => 'Childish Gambino',
     'profile_image' => '/images/childish_gambino_profile.jpeg'
   }
 )
 
-artist1.save()
-artist2.save()
-artist3.save()
+beyonce = Artist.new(
+  {
+    'name' => 'Beyonce',
+    'profile_image' => '/images/beyonce_profile.jpg'
+  }
+)
+
+alabamashakes = Artist.new(
+  {
+    'name' => 'Alabama Shakes',
+    'profile_image' => '/images/alabama_shakes_profile.jpg'
+  }
+)
+
+altj = Artist.new(
+  {
+    'name' => 'Alt-J',
+    'profile_image' => '/images/altj_profile.png'
+  }
+)
+
+radiohead.save()
+gogopenguin.save()
+childishgambino.save()
+beyonce.save()
+alabamashakes.save()
+altj.save()
 
 
-album1 = Album.new(
+kida = Album.new(
   {
     'title' => 'Kid A',
     'stock' => 2,
     'genre' => 'alternative',
-    'artist_id' => artist1.id,
+    'artist_id' => radiohead.id,
     'buy_price' => 6,
     'sell_price' => 10,
     'artwork' => '/images/kid_a.jpg'
   }
 )
 
-album2 = Album.new(
+amoonshapedpool = Album.new(
   {
     'title' => 'A Moon Shaped Pool',
     'stock' => 3,
     'genre' => 'alternative',
-    'artist_id' => artist1.id,
+    'artist_id' => radiohead.id,
     'buy_price' => 8,
     'sell_price' => 11,
     'artwork' => '/images/a_moon_shaped_pool.jpg'
   }
 )
 
-album3 = Album.new(
+v20 = Album.new(
   {
     'title' => 'v2.0',
     'stock' => 1,
     'genre' => 'jazz',
-    'artist_id' => artist2.id,
+    'artist_id' => gogopenguin.id,
     'buy_price' => 4,
     'sell_price' => 8,
     'artwork' => '/images/v2-0.jpg'
   }
 )
 
-album4 = Album.new(
+manmadeobject = Album.new(
   {
     'title' => 'Man Made Object',
     'stock' => 1,
     'genre' => 'jazz',
-    'artist_id' => artist2.id,
+    'artist_id' => gogopenguin.id,
     'buy_price' => 6,
     'sell_price' => 10,
     'artwork' => '/images/man_made_object.jpg'
   }
 )
 
-album5 = Album.new(
+awakenmylove = Album.new(
   {
     'title' => '"Awaken, My Love!"',
     'stock' => 4,
     'genre' => 'R&B',
-    'artist_id' => artist3.id,
+    'artist_id' => childishgambino.id,
     'buy_price' => 7,
     'sell_price' => 11,
     'artwork' => '/images/awaken_my_love.jpg'
   }
 )
 
-album1.save()
-album2.save()
-album3.save()
-album4.save()
-album5.save()
+lemonade = Album.new(
+  {
+    'title' => 'Lemonade',
+    'stock' => 8,
+    'genre' => 'R&B',
+    'artist_id' => beyonce.id,
+    'buy_price' => 8,
+    'sell_price' => 13,
+    'artwork' => '/images/lemonade.jpg'
+  }
+)
+
+soundandcolor = Album.new(
+  {
+    'title' => 'Sound and Color',
+    'stock' => 8,
+    'genre' => 'R&B',
+    'artist_id' => alabamashakes.id,
+    'buy_price' => 5,
+    'sell_price' => 10,
+    'artwork' => '/images/sound_and_color.jpg'
+  }
+)
+
+anawesomewave = Album.new(
+  {
+    'title' => 'An Awesome Wave',
+    'stock' => 8,
+    'genre' => 'R&B',
+    'artist_id' => altj.id,
+    'buy_price' => 4,
+    'sell_price' => 9,
+    'artwork' => '/images/an_awesome_wave.jpg'
+  }
+)
+
+kida.save()
+amoonshapedpool.save()
+v20.save()
+manmadeobject.save()
+awakenmylove.save()
+lemonade.save()
+soundandcolor.save()
+anawesomewave.save()
 
 binding.pry
 nil

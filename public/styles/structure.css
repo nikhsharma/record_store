@@ -48,8 +48,18 @@ nav .link:hover a {
   align-items: center;
 }
 
+.double-size {
+  font-size: 2rem;
+}
+
 .new-link {
   margin-left: 10px;
+  transition: 0.2s;
+}
+
+.new-link:hover {
+  font-size: 120%;
+  transition: 0.2s;
 }
 
 #new-album {
