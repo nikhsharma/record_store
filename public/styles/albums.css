@@ -9,21 +9,47 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding-left: 5%;
 }
 
-.show-album img {
-  float: left;
-  height: 94vh;
-  width: 94vh;
+@media all and ( max-width: 720px ) {
+  .show-album-content {
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+  }
+  .show-album a {
+    color: white;
+  }
+  .show-album input {
+    color: white;
+    border: 1px solid white;
+  }
+  .show-artwork {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+.show-album-content p {
+  margin: 10px;
+}
+
+
+.show-artwork {
+  height: 93vh;
 }
 
 .show-album h1 {
   font-size: 3rem;
-  margin: 0;
+  margin-bottom: 50px;
 }
 
 .show-album h2 {
 margin-top: 0;
+margin-bottom: 200px;
 padding: 0;
 }
 
@@ -39,22 +65,29 @@ padding: 0;
   margin: 0;
 }
 
-#album-tiles h1, h2, p {
+#album-tiles h1 {
   color: white;
-  background-color: rgba(0,0,0,0.2) !important;
+  background-color: rgba(0,0,0,0.2);
+  margin: 0;
+  width: 33vw;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#album-tiles h2 {
+  color: white;
+  background-color: rgba(0,0,0,0.2);
   margin: 0;
   width: 33vw;
   text-align: center;
 }
 
-#album-tiles h1 {
-  font-size: 2rem;
-}
-#album-tiles h2 {
-  font-size:
-}
 #album-tiles p {
-  font-size:
+  color: white;
+  background-color: rgba(0,0,0,0.2);
+  margin: 0;
+  width: 33vw;
+  text-align: center;
 }
 
 .album-div {

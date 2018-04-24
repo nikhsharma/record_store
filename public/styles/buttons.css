@@ -16,3 +16,12 @@ border-radius: 5px;
   font-size: 1.5rem;
   transition: 0.2s;
 }
+
+.album-buttons {
+  display: flex;
+}
+
+.album-buttons form input {
+  font-size: 1.1rem;
+  margin: 15px;
+}
