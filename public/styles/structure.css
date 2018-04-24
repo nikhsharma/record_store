@@ -73,7 +73,7 @@ nav .link:hover a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 85vh;
+  height: 80vh;
 }
 
 #home h1 {
@@ -83,4 +83,9 @@ nav .link:hover a {
 #new-artist {
   height: 100vh;
   background-image: url("/images/gogo_penguin_profile.jpg");
+}
+
+.artists-link {
+  margin-left: 10px;
+  padding: 5px;
 }

@@ -17,7 +17,9 @@ end
 get '/search' do
   @artist = Artist.find_by_name(params['name'])
   if @artist == nil
-    redirect to '/'
+    @artists = Artist.all()
+    @albums = Album.all()
+    erb(:not_found)
   else
     erb(:"artists/show")
   end
