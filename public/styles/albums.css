@@ -32,34 +32,50 @@ padding: 0;
   width: 200px;
 }
 
-.all-albums {
+#album-tiles {
   display: flex;
   flex-wrap: wrap;
-  width: 85vw;
-  margin-left: 10vw;
+  padding: 0;
+  margin: 0;
 }
 
-.albums {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  border: 1px solid black;
-  width: 400px;
-  height: 200px;
+#album-tiles h1, h2, p {
+  color: white;
+  background-color: rgba(0,0,0,0.2) !important;
+  margin: 0;
+  width: 33vw;
+  text-align: center;
 }
 
+#album-tiles h1 {
+  font-size: 2rem;
+}
+#album-tiles h2 {
+  font-size:
+}
+#album-tiles p {
+  font-size:
+}
 
-.albums-content {
+.album-div {
+  height: 33vw;
+  width: 33vw;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0,0,0,0.4) !important;
+  background-blend-mode: darken !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 0.2s;
 }
 
-.albums h1 {
-  font-size: 1.2rem;
-  margin-bottom: 0;
-}
-
-.albums p {
-  margin: 0;
+.album-div:hover {
+  background-blend-mode: lighten !important;
+  font-size: 200%;
+  transition: 0.2s;
 }

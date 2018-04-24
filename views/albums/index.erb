@@ -1,15 +1,13 @@
 <h1 class="center">All albums | <a class="new-link" href="/albums/new">Add new Album</a></h1>
 
-
-<div class="all-albums">
+<section id="album-tiles">
 <% @albums.each do |album| %>
-<a href="/albums/<%= album.id %>"><div class="albums">
-<img class="thumbnail" src="<%= album.artwork %>" alt="">
-<div class="albums-content">
-<h1><a href="/albums/<%= album.id %>"><%= album.title %></a></h1>
-<a href="/artists/<%= album.artist.id%>"><%= album.artist.name %></a>
-<p>Stock level: <%= album.stock_level %></p>
+<a href="/albums/<%= album.id %>">
+<div class="album-div" style="background-image: url(<%= album.artwork %>);">
+  <h1><%= album.title %></h1>
+  <h2><%= album.artist.name %></h2>
+  <p>Stock Level: <%= album.stock_level %></p>
 </div>
-</div></a>
+</a>
 <% end %>
-</div>
+</section>
