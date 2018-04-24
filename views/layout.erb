@@ -16,14 +16,14 @@
   <main>
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li>|</li>
-        <li><a href="/artists">Artists</a></li>
-        <li>|</li>
-        <li><a href="/albums">Albums</a></li>
-        <li>|</li>
-        <li><a href="/inventory">Inventory</a></li>
-        <li>|</li>
+        <li class="link" onclick="location.href='/'"><a href="/">Home</a></li>
+        <!-- <li>|</li> -->
+        <li class="link" onclick="location.href='/artists'"><a href="/artists">Artists</a></li>
+        <!-- <li>|</li> -->
+        <li class="link" onclick="location.href='/albums'"><a href="/albums">Albums</a></li>
+        <!-- <li>|</li> -->
+        <li class="link" onclick="location.href='/inventory'"><a href="/inventory">Inventory</a></li>
+        <!-- <li>|</li> -->
         <li>
           <form class="search-bar" action="/search" method="get">
             <input type="text" name="name" >
