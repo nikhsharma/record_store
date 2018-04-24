@@ -58,14 +58,14 @@ padding: 0;
   width: 200px;
 }
 
-#album-tiles {
+.album-tiles {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
 
-#album-tiles h1 {
+.album-tiles h1 {
   color: white;
   background-color: rgba(0,0,0,0.2);
   margin: 0;
@@ -74,7 +74,7 @@ padding: 0;
   font-size: 2rem;
 }
 
-#album-tiles h2 {
+.album-tiles h2 {
   color: white;
   background-color: rgba(0,0,0,0.2);
   margin: 0;
@@ -82,7 +82,7 @@ padding: 0;
   text-align: center;
 }
 
-#album-tiles p {
+.album-tiles p {
   color: white;
   background-color: rgba(0,0,0,0.2);
   margin: 0;

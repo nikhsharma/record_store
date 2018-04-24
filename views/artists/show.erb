@@ -1,23 +1,21 @@
 <section class="profile" style="background: url(<%= @artist.profile_image %>);"> </section>
-
-<h1 class="center"><%= @artist.name %></h1>
-
-<div class="all-albums">
-<% @artist.albums.each do |album| %>
-<a href="/albums/<%= album.id %>"><div class="albums">
-<img class="thumbnail" src="<%= album.artwork %>" alt="">
-<div class="albums-content">
-<h1><a href="/albums/<%= album.id %>"> <%= album.title %></a></h1>
-<p>Genre: <%= album.genre %></p>
-<p>Stock: <%= album.stock %></p>
-</div>
-</div></a>
-<% end %>
-</div>
-
-<form action="/artists/<%= @artist.id %>/delete" method="post">
+<div class="artist-title">
+<h1 class="center"><%= @artist.name %></h1><form action="/artists/<%= @artist.id %>/delete" method="post">
   <input type="submit" class="button" value="Delete Artist">
 </form>
 <form action="/artists/<%= @artist.id %>/update" method="get">
   <input type="submit" class="button" value="Update Artist">
 </form>
+</div>
+
+
+<section class="album-tiles">
+<% @artist.albums.each do |album| %>
+<a href="/albums/<%= album.id %>">
+<div class="album-div" style="background-image: url(<%= album.artwork %>);">
+  <h2><%= album.title %></h2>
+  <p>Stock Level: <%= album.stock_level %></p>
+</div>
+</a>
+<% end %>
+</section>
