@@ -2,7 +2,7 @@
 
 <% @artists.each do |artist| %>
 <a href="/artists/<%= artist.id%>">
-<section class="artist black-overlay" style="background: url(<%= artist.profile_image %>);">
+<section class="artist black-overlay" style="background-image: url(<%= artist.profile_image %>);">
 <h1><%= artist.name %></h1>
 </section></a>
 <% end %>

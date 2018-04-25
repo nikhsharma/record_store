@@ -1,4 +1,4 @@
-<section class="profile" style="background: url(<%= @artist.profile_image %>);"> </section>
+<section class="profile" style="background-image: url(<%= @artist.profile_image %>);"> </section>
 <div class="artist-title">
 <h1 class="center"><%= @artist.name %></h1><form action="/artists/<%= @artist.id %>/delete" method="post">
   <input type="submit" class="button" value="Delete Artist">

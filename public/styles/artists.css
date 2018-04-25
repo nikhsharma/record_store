@@ -3,9 +3,9 @@
   width: 100vw;
   margin: 0, auto;
   padding: 0, auto;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: 50% 30% !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 30%;
 }
 
 .artist-title {
@@ -30,16 +30,16 @@
 .artist {
   display: flex;
   height: 30vh;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: 50% 30% !important;
-  background-color: rgba(0,0,0,0.4) !important;
-  background-blend-mode: darken !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 30%;
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: darken;
   transition: 0.5s;
 }
 
 .artist:hover {
-  background-blend-mode: lighten !important;
+  background-blend-mode: lighten;
   transition: 0.2s;
 }
 

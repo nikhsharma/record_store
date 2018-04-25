@@ -27,12 +27,14 @@ class Album
     sql = "UPDATE albums SET (title, stock, genre, buy_price, sell_price) = ($1, $2, $3, $4, $5) WHERE id = $6"
     values = [@title, @stock, @genre, @buy_price, @sell_price, @id]
     SqlRunner.run(sql, values)
+
   end
 
   def delete()
     sql = "DELETE FROM albums WHERE id = $1;"
     values = [@id]
     SqlRunner.run(sql, values)
+    self.artist.delete() if self.artist.albums.count == 0
   end
 
   def artist()
@@ -43,9 +45,9 @@ class Album
   end
 
   def stock_level()
-      return "Low" if @stock < 4
-      return "Medium" if @stock >= 4 && @stock < 7
-      return "High" if @stock >= 7
+    return "Low" if @stock < 4
+    return "Medium" if @stock >= 4 && @stock < 7
+    return "High" if @stock >= 7
   end
 
   def markup()

@@ -95,11 +95,11 @@ padding: 0;
   width: 33vw;
   margin: 0;
   padding: 0;
-  background-color: rgba(0,0,0,0.4) !important;
-  background-blend-mode: darken !important;
-  background-position: center center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: darken;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -108,7 +108,7 @@ padding: 0;
 }
 
 .album-div:hover {
-  background-blend-mode: lighten !important;
+  background-blend-mode: lighten;
   font-size: 200%;
   transition: 0.2s;
 }
@@ -118,11 +118,11 @@ padding: 0;
   width: 250px;
   margin: 10px;
   padding: 0;
-  background-color: rgba(0,0,0,0.4) !important;
-  background-blend-mode: darken !important;
-  background-position: center center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: darken;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -131,7 +131,7 @@ padding: 0;
 }
 
 .home-album-div:hover {
-  background-blend-mode: lighten !important;
+  background-blend-mode: lighten;
   font-size: 120%;
   transform: scale(1.1);
   transition: 0.2s;
