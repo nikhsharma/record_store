@@ -26,6 +26,7 @@
   <label for="sell_price">Sell Price:</label>
   <input type="number" name="sell_price" id="sell_price" value="<%= @album.sell_price %>">
 </div>
+  <input type="hidden" name="artist_id" id="artist_id" value="<%= @album.artist.id %>">
   <input type="submit" class="button" value="Update Album">
 </form>
 </section>

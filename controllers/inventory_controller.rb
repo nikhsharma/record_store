@@ -8,8 +8,7 @@ get '/inventory' do
 end
 
 post '/inventory/:id/update' do
-  @album = Album.find_by_id(params['id'])
-  @album.stock = params['stock']
+  @album = Album.new(params)
   @album.update()
   @all_genres = Album.all_genres()
   redirect to '/inventory'
