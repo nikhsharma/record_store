@@ -37,8 +37,13 @@
     </td>
     <td class="sm">
       <form action="/inventory/<%= album.id %>/update" method="post">
-        <label for="stock"></label>
         <input type="number" name="stock" id="stock" value="<%= album.stock %>">
+        <input type="hidden" name="title" id="title" value="<%= album.title %>">
+        <input type="hidden" name="genre" id="genre" value="<%= album.genre %>">
+        <input type="hidden" name="buy_price" id="buy_price" value="<%= album.buy_price %>">
+        <input type="hidden" name="sell_price" id="sell_price" value="<%= album.sell_price %>">
+        <input type="hidden" name="artwork" id="artwork" value="<%= album.artwork %>">
+        <input type="hidden" name="artist_id" id="artist_id" value="<%= album.artist_id %>">
         <input type="submit" class="button" value="Update">
       </form>
     </td>
