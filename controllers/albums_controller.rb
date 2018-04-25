@@ -3,7 +3,7 @@ require('sinatra/contrib/all')
 require_relative('../models/album.rb')
 
 get '/albums' do
-  @albums = Album.all()
+  @albums = Album.all_by_title_asc()
   erb(:"albums/index")
 end
 
