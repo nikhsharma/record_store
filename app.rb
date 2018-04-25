@@ -13,7 +13,6 @@ get '/' do
   erb(:index)
 end
 
-
 get '/search' do
   @artist = Artist.find_by_name(params['name'])
   @album = Album.find_by_title(params['name'])

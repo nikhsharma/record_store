@@ -35,7 +35,7 @@ class Artist
     sql = "SELECT * FROM albums WHERE artist_id = $1 ORDER BY title;"
     values = [@id]
     albums = SqlRunner.run(sql, values)
-    return albums.map { |album| Album.new(album)}
+    return Album.map_albums(albums)
   end
 
   def self.find_by_id(id)
@@ -49,24 +49,28 @@ class Artist
     sql = "SELECT * FROM artists WHERE name = $1;"
     values = [name]
     artists = SqlRunner.run(sql, values)
-    return artists.map { |artist| Artist.new(artist)}[0]
+    return map_artists(artists)[0]
   end
 
   def self.all()
     sql = "SELECT * FROM artists ORDER BY name ASC;"
     artists = SqlRunner.run(sql)
-    return artists.map { |artist| Artist.new(artist)}
+    return map_artists(artists)
   end
 
   def self.all_desc()
     sql = "SELECT * FROM artists ORDER BY name DESC;"
     artists = SqlRunner.run(sql)
-    return artists.map { |artist| Artist.new(artist)}
+    return map_artists(artists)
   end
 
   def self.delete_all()
     sql = "DELETE FROM artists;"
     SqlRunner.run(sql)
+  end
+
+  def self.map_artists(artists)
+    return artists.map { |artist| Artist.new(artist)}
   end
 
 end

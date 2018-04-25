@@ -71,13 +71,13 @@ class Album
     sql = "SELECT * FROM albums WHERE title = $1;"
     values = [title]
     albums =  SqlRunner.run(sql, values)
-    return albums.map { |album| Album.new(album)}[0]
+    return map_albums(albums)[0]
   end
 
   def self.all()
     sql = "SELECT albums.* FROM albums INNER JOIN artists ON albums.artist_id = artists.id ORDER BY artists.name ASC;"
     albums = SqlRunner.run(sql)
-    return albums.map { |album| Album.new(album)}
+    return map_albums(albums)
   end
 
   def self.all_by_title_asc()
@@ -89,19 +89,19 @@ class Album
   def self.all_by_title_desc()
     sql = "SELECT * FROM albums ORDER BY title desc;"
     albums = SqlRunner.run(sql)
-    return albums.map { |album| Album.new(album)}
+    return map_albums(albums)
   end
 
   def self.all_by_stock_asc()
     sql = "SELECT * FROM albums ORDER BY stock ASC;"
     albums = SqlRunner.run(sql)
-    return albums.map { |album| Album.new(album)}
+    return map_albums(albums)
   end
 
   def self.all_by_stock_desc()
     sql = "SELECT * FROM albums ORDER BY stock DESC;"
     albums = SqlRunner.run(sql)
-    return albums.map { |album| Album.new(album)}
+    return map_albums(albums)
   end
 
   def self.all_genres()
@@ -114,6 +114,10 @@ class Album
   def self.delete_all()
     sql = "DELETE FROM albums;"
     SqlRunner.run(sql)
+  end
+
+  def self.map_albums(albums)
+    albums.map { |album| Album.new(album) }
   end
 
 end
